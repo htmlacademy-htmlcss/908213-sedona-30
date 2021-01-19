@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Сергей Быстров](https://up.htmlacademy.ru/htmlcss/30/user/908213).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Дроганов](https://htmlacademy.ru/profile/dmdragon).
 
 ---
 
