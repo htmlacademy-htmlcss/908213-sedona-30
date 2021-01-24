@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+<!--<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
+    <title>Гостиницы</title>
+  </head>
+  <body>
+  <header>
+	  <nav>
+		  <a href="index.html">
+			<img src="https://via.placeholder.com/138x70" alt="">
+		  </a>
+		  <ul>
+		  	<li><a href="blank.html">Информация</a></li>
+		  	<li><a href="blank.html">Фото и видео</a></li>
+		  	<li><a href="blank.html">Карта штата</a></li>
+		  	<li><a href="catalog.html">Гостиницы</a></li>
+		  </ul>
+	  </nav>
+  </header>
+  <main>
+  	<h1>Гостиницы</h1>
+  	<section class="hotel-filters">
+	  	<h2>Фильтр гостиниц</h2>
+	  	<form action="https://echo.htmlacademy.ru/" method="post">
+		  	<fieldset>
+			  	<legend>Инфраструктура:</legend>
+		  		<input type="checkbox" name="pool" id="form-pool" checked>
+		  		<label for="form-pool">Бассейн</label>
+		  		<input type="checkbox" name="parking" id="form-parking">
+		  		<label for="form-parking">Парковка</label>
+		  		<input type="checkbox" name="wi-fi" id="form-wi-fi">
+		  		<label for="form-wi-fi">Wi-Fi</label>
+		  	</fieldset>
+		  	<fieldset>
+			  	<legend>Тип жилья:</legend>
+		  		<input type="checkbox" name="hotel" id="form-hotel" checked>
+		  		<label for="form-hotel">Гостиница</label>
+		  		<input type="checkbox" name="motel" id="form-motel" checked>
+		  		<label for="form-motel">Мотель</label>
+		  		<input type="checkbox" name="apartments" id="form-apartments" checked>
+		  		<label for="form-apartments">Апартаменты</label>
+		  	</fieldset>
+		  	<fieldset>
+			  	<legend>Стоимость в сутки (Р):</legend>
+			  	<p>
+			  		<label for="form-cost-min">От</label>
+			  		<input type="number" name="cost-min" id="form-cost-min" step="300" value="0">
+			  		<label for="form-cost-max">До</label>
+			  		<input type="number" name="cost-max" id="form-cost-max" step="300" max="3600" value="3000">
+		  		</p>
+		  		<input type="range" name="cost-range" id="form-cost-range" min="0" max="3600" value="3000">
+		  	</fieldset>
+		  	<button type="submit">Показать</button>
+	  	</form>
+  	</section>
+  	<section class="hotel-catalog">
+	  	<h2>Выбрать гостиницу</h2>
+	  	<output name="sort-result">Найдено: 3</output>
+	  	<p>Сортировка:</p>
+	  	<ul>
+		  	<li><a href="#">По цене</a></li>
+		  	<li><a href="#">По типу</a></li>
+		  	<li><a href="#">По рейтингу</a></li>
+	  	</ul>
+	  	<p>
+		  	<button type="button" disabled>Назад</button>
+		  	<button type="button">Вперёд</button>
+	  	</p>
+	  	<ul>
+		  	<li>
+		  		<h3>Amara Resort & Spa</h3>
+		  		<img src="https://via.placeholder.com/135x90" alt="">
+		  		<p>Гостиница</p>
+		  		<p>От 4000 Р.</p>
+		  		<p>Рейтинг: 8,5</p>
+		  		<a href="blank.html">Подробнее</a>
+		  		<a href="blank.html">Забронировать</a>
+		  	</li>
+		  	<li>
+		  		<h3>Desert Quail Inn</h3>
+		  		<img src="https://via.placeholder.com/135x90" alt="">
+		  		<p>Мотель</p>
+		  		<p>От 3000 Р.</p>
+		  		<p>Рейтинг: 8,9</p>
+		  		<a href="blank.html">Подробнее</a>
+		  		<a href="blank.html">Забронировать</a>
+		  	</li>
+		  	<li>
+		  		<h3>Villas at Poco Diablo</h3>
+		  		<img src="https://via.placeholder.com/135x90" alt="">
+		  		<p>Апартаменты</p>
+		  		<p>От 2000 Р.</p>
+		  		<p>Рейтинг: 9,2</p>
+		  		<a href="blank.html">Подробнее</a>
+		  		<a href="blank.html">Забронировать</a>
+		  	</li>
+	  	</ul>
+  	</section>
+  </main>
+  <footer>
+		<section class="contacts">
+			<h2>Контактная информация</h2> 
+			<a href="#">#visitsedona</a><br>
+			<p>Тел: <a href="tel:74956660166">+7(495) 666-01-66</a></p>
+		</section>
+		<section class="social">
+			<h2>Социальные сети</h2>
+			<ul>
+				<li class="social-item twitter"><a href="#">twitter</a></li>
+				<li class="social-item facebook"><a href="#">facebook</a></li>
+				<li class="social-item youtube"><a href="#">youtube</a></li>
+			</ul>
+		</section>
+		<section class="social">
+			<h2>Разработано:</h2>
+			<p>Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/115x41" alt=""></a></p>
+		</section>
+  </footer>
+  </body>
+</html>
