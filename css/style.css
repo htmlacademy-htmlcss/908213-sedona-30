@@ -1,0 +1,266 @@
+@font-face {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  src: url('../fonts/PTSans.woff2') format('woff2');
+  src: url('../fonts/PTSans-Bold.woff2') format('woff2');
+  src: url('../fonts/PTSans.woff') format('woff');
+  src: url('../fonts/PTSans-Bold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #FFFFFF;
+  --basic-dark: #333333;
+  --basic-light-blue: #81B3D2;
+  --basic-blue: #669EC0;
+  --basic-dark-blue: #5496BD;
+  --basic-light-brown: #766357;
+  --basic-brown: #604E43;
+  --basic-dark-brown: #503E33;
+  --basic-light-grey: #F2F2F2;
+  --basic-grey: #EEEEEE;
+  --basic-dark-grey: #666666;
+  --basic-bright-gray: #BDBBBC;
+  --basic-special: #CACACA;
+}
+
+/* Global */
+
+.page-body {
+  min-width: 1280px;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--basic-dark);
+  background-color: var(--basic-light-grey);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Base classes */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Header */
+
+.header {
+background-color: var(--basic-white);
+}
+
+/* Main navigation */
+
+.site-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-navigation a {
+  color: var(--basic-black);
+  font-weight: bold;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: var(--basic-light-blue);
+}
+.site-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Promo */
+
+.promo img {
+  background-color: var(--basic-light-blue);
+}
+
+
+.promo-subtitle {
+  font-weight: bold;
+  font-size: 21px;
+  color: var(--basic-black);
+}
+
+/* Features */
+
+.features-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.features-item-title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.features-item-text {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.features-sublist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.features-sublist-title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.features-item img {
+  background-color: var(--basic-light-brown);
+}
+
+.features-item-color-invert {
+  color: var(--basic-white);
+  background-color: var(--basic-light-blue);
+}
+
+.color-grey {
+  background-color: var(--basic-grey);
+}
+
+/* Hotel search */
+
+.hotel-search-subtitle {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.hotel-search-text {
+  line-height: 24px;
+}
+
+.hotel-search-map {
+  background-color: var(--basic-dark-grey);
+}
+
+/* Page footer */
+
+.page-footer {
+  background-color: var(--basic-white);
+  opacity: 0.9;
+}
+
+/* footer-contacts */
+
+.footer-contacts-link,
+.footer-contacts-text,
+.footer-phone {
+  font-weight: bold;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* footer-social */
+
+.social-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social-item {
+  background-color: var(--basic-light-blue);
+}
+
+.social-item:hover,
+.social-item:focus {
+  background-color: var(--basic-blue);
+}
+
+.social-item:active {
+  background-color: var(--basic-dark-blue);
+}
+
+/* footer-copyright */
+
+.footer-copyright-text {
+  color: #000000;
+}
+
+.footer-copyright-logo img {
+  display: none;
+}
+
+.footer-copyright-logo {
+  display: inline-block;
+  width: 115px;
+  height: 41px;
+  background: url('../img/logo/logo-htmlacademy.svg') no-repeat;
+}
+
+.footer-copyright-logo:hover,
+.footer-copyright-logo:focus {
+  background: url('../img/logo/logo-htmlacademy-hover.svg') no-repeat;
+}
+.footer-copyright-logo:active {
+  background: url('../img/logo/logo-htmlacademy-active.svg') no-repeat;
+}
+
+/* Button */
+
+.button {
+  border: none;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  color: #FFFFFF;
+  background-color: var(--basic-light-brown);
+  vertical-align: middle;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--basic-brown);
+}
+.button:active {
+  background-color: var(--basic-dark-brown);
+}
+.button span:active {
+  opacity: 0.3;
+}
