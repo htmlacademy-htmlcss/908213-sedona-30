@@ -35,15 +35,15 @@
     	  	  <fieldset class="filter-item filter-infrastructure">
     		  	  <legend class="hotel-filters-subtitle">Инфраструктура:</legend>
     		  	  <ul class="filter-infrastructure-list">
-      		  	  <li class="filter-infrastructure-list">
+      		  	  <li class="filter-infrastructure-item">
                   <input type="checkbox" name="pool" id="form-pool" checked>
                   <label class="hotel-filters-item" for="form-pool">Бассейн</label>
                 </li>
-                <li class="filter-infrastructure-list">
+                <li class="filter-infrastructure-item">
                   <input type="checkbox" name="parking" id="form-parking">
                   <label class="hotel-filters-item" for="form-parking">Парковка</label>
                 </li>
-                <li class="filter-infrastructure-list">
+                <li class="filter-infrastructure-item">
                   <input type="checkbox" name="wi-fi" id="form-wi-fi">
                   <label class="hotel-filters-item" for="form-wi-fi">Wi-Fi</label>
                 </li>
@@ -52,15 +52,15 @@
             <fieldset class="filter-item filter-housing">
     		  	  <legend class="hotel-filters-subtitle">Тип жилья:</legend>
     		  	  <ul class="filter-housing-list">
-      		  	  <li class="filter-housing-list">
+      		  	  <li class="filter-housing-item">
                   <input type="checkbox" name="hotel" id="form-hotel" checked>
                   <label class="hotel-filters-item" for="form-hotel">Гостиница</label>
                 </li>
-                <li class="filter-housing-list">
+                <li class="filter-housing-item">
                   <input type="checkbox" name="motel" id="form-motel" checked>
                   <label class="hotel-filters-item" for="form-motel">Мотель</label>
                 </li>
-                <li class="filter-housing-list">
+                <li class="filter-housing-item">
                   <input type="checkbox" name="apartments" id="form-apartments" checked>
                   <label class="hotel-filters-item" for="form-apartments">Апартаменты</label>
                 </li>
@@ -69,14 +69,14 @@
             <fieldset class="filter-item filter-price">
     		  	  <legend class="hotel-filters-subtitle">Стоимость в сутки (Р):</legend>
               <p class="hotel-filters-price-group">
-    		  		  <label class="hotel-filters-item" for="form-cost-min">От</label>
-                <input type="number" name="cost-min" id="form-cost-min" step="any" min="0" max="3000" value="" placeholder="ОТ 0">
-                <label class="hotel-filters-item" for="form-cost-max">До</label>
-                <input type="number" name="cost-max" id="form-cost-max" step="any" min="0" max="3000" value="" placeholder="ДО 3000">
+    		  		  <label class="hotel-filters-item from" for="form-cost-min">От</label>
+                <input type="number" name="cost-min" id="form-cost-min" step="any" min="0" max="3000" value="0">
+                <label class="hotel-filters-item end" for="form-cost-max">До</label>
+                <input type="number" name="cost-max" id="form-cost-max" step="any" min="0" max="3000" value="3000">
     	  		  </p>
               <div class="range-controls">
                 <div class="scale">
-                  <div class="bar" style="width: 83%;"></div>
+                  <div class="bar" style="width: 80%;"></div>
                 </div>
                 <div class="toggle toggle-min" tabindex="0" style="margin-left: 0%;"></div>
                 <div class="toggle toggle-max" tabindex="0" style="margin-left: 80%;"></div>
@@ -108,7 +108,13 @@
                 <img src="img/hotel-amara.jpg" width="135" height="90" alt="Гостиница на фоне закатного неба">
                 <p class="hotel-catalog-item-name">Гостиница</p>
                 <p class="hotel-catalog-item-price">От 4000 Р.</p>
-                <p class="hotel-catalog-item-rank sprite-star-4">Рейтинг: 8,5</p>
+                <ul class="hotel-catalog-star-list">
+                  <li class="hotel-catalog-star-item"></li>
+                  <li class="hotel-catalog-star-item"></li>
+                  <li class="hotel-catalog-star-item"></li>
+                  <li class="hotel-catalog-star-item"></li>
+                </ul>
+                  <p class="hotel-catalog-item-rank sprite-star-4">Рейтинг: 8,5</p>
                 <div class="button-group">
                   <a class="hotel-catalog-item-more" href="blank.html"><span>Подробнее</span></a>
                   <a class="hotel-catalog-item-reservation" href="blank.html"><span>Забронировать</span></a>
@@ -119,6 +125,11 @@
                 <img src="img/hotel-desert.jpg" width="135" height="90" alt="Гостиница возле дороги">
                 <p class="hotel-catalog-item-name">Мотель</p>
                 <p class="hotel-catalog-item-price">От 3000 Р.</p>
+                <ul class="hotel-catalog-star-list">
+                  <li class="hotel-catalog-star-item"></li>
+                  <li class="hotel-catalog-star-item"></li>
+                  <li class="hotel-catalog-star-item"></li>
+                </ul>
                 <p class="hotel-catalog-item-rank sprite-star-3">Рейтинг: 8,9</p>
                 <div class="button-group">
                   <a class="hotel-catalog-item-more" href="blank.html"><span>Подробнее</span></a>
@@ -130,6 +141,10 @@
                 <img src="img/hotel-villas.jpg" width="135" height="90" alt="Гостиница на зелёной лужайке">
                 <p class="hotel-catalog-item-name">Апартаменты</p>
                 <p class="hotel-catalog-item-price">От 2000 Р.</p>
+                <ul class="hotel-catalog-star-list">
+                  <li class="hotel-catalog-star-item"></li>
+                  <li class="hotel-catalog-star-item"></li>
+                </ul>
                 <p class="hotel-catalog-item-rank sprite-star-2">Рейтинг: 9,2</p>
                 <div class="button-group">
                   <a class="hotel-catalog-item-more" href="blank.html"><span>Подробнее</span></a>
