@@ -2,7 +2,7 @@
   font-family: 'PT Sans';
   src:
     local('PTSans Regular'),
-    local('PTSans-Regular');
+    local('PTSans-Regular'),
     url('../fonts/PTSans.woff2') format('woff2'),
     url('../fonts/PTSans.woff') format('woff');
     font-weight: 400;
@@ -13,7 +13,7 @@
   font-family: 'PT Sans';
   src:
     local('PTSans Bold'),
-    local('PTSans-Bold');
+    local('PTSans-Bold'),
     url('../fonts/PTSans-Bold.woff2') format('woff2'),
     url('../fonts/PTSans-Bold.woff') format('woff');
     font-weight: 700;
@@ -204,7 +204,6 @@ img {
   left: 50%;
   margin-left: -228.325px;
 }
-
 
 .promo img {
   background-color: var(--basic-light-blue);
@@ -564,10 +563,6 @@ div[class^="features-item-color"] {
   align-items: center;
 }
 
-.footer-copyright-logo img {
-
-}
-
 .footer-copyright-logo {
   display: inline-block;
   width: 115px;
@@ -596,7 +591,6 @@ div[class^="features-item-color"] {
   color: #FFFFFF;
   background-color: var(--basic-light-brown);
   vertical-align: middle;
-  margin-bottom: 0px;
   padding: 31px 139px;
 }
 
@@ -649,7 +643,6 @@ div[class^="features-item-color"] {
   display: none;
 }
 
-
 .form-hotel-search p {
   display: none;
 }
@@ -659,7 +652,6 @@ div[class^="features-item-color"] {
   border: 0;
   background-color: var(--basic-light-grey);
 }
-
 
 .arrival-date-group {
   position: relative;
@@ -695,7 +687,6 @@ div[class^="features-item-color"] {
   margin-bottom: 30px;
 }
 
-
 .arrival-age-group {
   display: flex;
   align-items: center;
@@ -714,8 +705,6 @@ div[class^="features-item-color"] {
 .form-hotel-search-btn:active {
   background-color: var(--basic-dark-blue);
 }
-
-
 
 
 .arrival-date-group label {
@@ -746,7 +735,6 @@ div[class^="features-item-color"] {
   margin-right: 78.5px;
 }
 
-
 .arrival-date-children-group {
   display: flex;
   position: relative;
@@ -760,7 +748,6 @@ div[class^="features-item-color"] {
   width: 39px;
   text-align: center;
 }
-
 
 .control-number-grownup::before,
 .control-number-children::before,
@@ -807,28 +794,38 @@ div[class^="features-item-color"] {
 .hotel-filters-form {
   background-color: transparent;
   display: grid;
-  grid-template-columns: max-content max-content 290px max-content;
+  grid-template-columns: max-content max-content 350px max-content;
   grid-template-rows: auto auto auto;
   align-items: start;
 }
 
-.break {
-  width: 100%;
+.filter-item {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-.filter-item {
+.filter-infrastructure-list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  border: none;
+  list-style: none;
+  margin-right: 117px;
+}
+
+.filter-housing-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .filter-infrastructure,
 .filter-housing {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   max-width: 195px;
   margin-top: -5px;
   margin-left: -1px;
