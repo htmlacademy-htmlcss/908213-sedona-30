@@ -67,13 +67,14 @@
                 </li>
               </ul>
     	  	  </fieldset>
+    	  	  <div class="filter-range-block">
             <fieldset class="filter-item filter-price">
     		  	  <legend class="hotel-filters-subtitle">Стоимость в сутки (Р):</legend>
               <p class="hotel-filters-price-group">
     		  		  <label class="hotel-filters-item from" for="form-cost-min">От</label>
-                <input type="number" name="cost-min" id="form-cost-min" step="any" min="0" max="3000" value="0">
+                <input class="filters-cost-min" type="number" name="cost-min" id="form-cost-min" step="any" min="0" max="3000" value="0">
                 <label class="hotel-filters-item end" for="form-cost-max">До</label>
-                <input type="number" name="cost-max" id="form-cost-max" step="any" min="0" max="3000" value="3000">
+                <input class="filters-cost-max" type="number" name="cost-max" id="form-cost-max" step="any" min="0" max="3000" value="3000">
     	  		  </p>
               <div class="range-controls">
                 <div class="scale">
@@ -84,6 +85,7 @@
               </div>
     	  	  </fieldset>
             <button class="button filter-btn-show" type="submit">Показать</button>
+            </div>
       	  </form>
       	  </div>
     	  </section>
@@ -110,10 +112,10 @@
                 <p class="hotel-catalog-item-name">Гостиница</p>
                 <p class="hotel-catalog-item-price">От 4000 Р.</p>
                 <ul class="hotel-catalog-star-list">
-                  <li class="hotel-catalog-star-item"></li>
-                  <li class="hotel-catalog-star-item"></li>
-                  <li class="hotel-catalog-star-item"></li>
-                  <li class="hotel-catalog-star-item"></li>
+                  <li class="hotel-catalog-star-item"><img src="img/icons/star.svg" width="19" height="17" alt=""></li>
+                  <li class="hotel-catalog-star-item"><img src="img/icons/star.svg" width="19" height="17" alt=""></li>
+                  <li class="hotel-catalog-star-item"><img src="img/icons/star.svg" width="19" height="17" alt=""></li>
+                  <li class="hotel-catalog-star-item"><img src="img/icons/star.svg" width="19" height="17" alt=""></li>
                 </ul>
                   <p class="hotel-catalog-item-rank sprite-star-4">Рейтинг: 8,5</p>
                 <div class="button-group">
@@ -127,9 +129,9 @@
                 <p class="hotel-catalog-item-name">Мотель</p>
                 <p class="hotel-catalog-item-price">От 3000 Р.</p>
                 <ul class="hotel-catalog-star-list">
-                  <li class="hotel-catalog-star-item"></li>
-                  <li class="hotel-catalog-star-item"></li>
-                  <li class="hotel-catalog-star-item"></li>
+                  <li class="hotel-catalog-star-item"><img src="img/icons/star.svg" width="19" height="17" alt=""></li>
+                  <li class="hotel-catalog-star-item"><img src="img/icons/star.svg" width="19" height="17" alt=""></li>
+                  <li class="hotel-catalog-star-item"><img src="img/icons/star.svg" width="19" height="17" alt=""></li>
                 </ul>
                 <p class="hotel-catalog-item-rank sprite-star-3">Рейтинг: 8,9</p>
                 <div class="button-group">
@@ -143,8 +145,8 @@
                 <p class="hotel-catalog-item-name">Апартаменты</p>
                 <p class="hotel-catalog-item-price">От 2000 Р.</p>
                 <ul class="hotel-catalog-star-list">
-                  <li class="hotel-catalog-star-item"></li>
-                  <li class="hotel-catalog-star-item"></li>
+                  <li class="hotel-catalog-star-item"><img src="img/icons/star.svg" width="19" height="17" alt=""></li>
+                  <li class="hotel-catalog-star-item"><img src="img/icons/star.svg" width="19" height="17" alt=""></li>
                 </ul>
                 <p class="hotel-catalog-item-rank sprite-star-2">Рейтинг: 9,2</p>
                 <div class="button-group">
