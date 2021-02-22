@@ -255,7 +255,7 @@ img {
   'one one one'
   'one one one'
   'second second second'
-  'three four five';
+  'other other other';
 }
 
 .features-item-cover-town {
@@ -277,6 +277,7 @@ div[class^="features-item-color"] {
 }
 .features-sublist {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .features-sublist li {
@@ -321,15 +322,28 @@ div[class^="features-item-color"] {
   flex-wrap: wrap;
 }
 
-.features-square-item {
-  grid-area: three;
+.features-item-other {
+  grid-area: other;
+}
+
+.features-list-other {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*.features-square-item {
+  grid-area: other;
 }
 .features-road-item {
-  grid-area: four;
+  grid-area: other;
 }
 .features-tourists-item {
-  grid-area: five;
-}
+  grid-area: other;
+}*/
 
 .features-item:not(.features-item-cover-town, .features-item-cover-bridge) {
   width: 260px;
@@ -521,10 +535,6 @@ div[class^="features-item-color"] {
 
 .social-item:not(:last-child) {
   margin-right: 6px;
-}
-
-.social-item a {
-  font-size: 0;
 }
 
 .social-item:hover,
@@ -740,8 +750,9 @@ div[class^="features-item-color"] {
 }
 
 .quantity-inner input {
-  width: 114px;
+  width: 38px;
   text-align: center;
+  background-color: transparent;
 }
 
 .label-arrival-date-grownup,
@@ -768,14 +779,13 @@ div[class^="features-item-color"] {
 }
 
 .quantity-inner {
-  position: relative;
+  display: flex;
+  background-color: var(--basic-light-grey);
 }
 
 .quantity-inner-btn-minus,
 .quantity-inner-btn-plus {
   border: 0;
-  background-color: transparent;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -783,6 +793,7 @@ div[class^="features-item-color"] {
   width: 36px;
   height: 38px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .quantity-inner-btn-minus {
@@ -802,15 +813,15 @@ div[class^="features-item-color"] {
   left: 78px;
 }
 
-.svg-btn-minus:hover path,
-.svg-btn-minus:focus path,
-.svg-btn-plus:hover path,
-.svg-btn-plus:focus path {
+.quantity-inner-btn-minus:hover rect,
+.quantity-inner-btn-minus:focus rect,
+.quantity-inner-btn-plus:hover path,
+.quantity-inner-btn-plus:focus path {
   fill: black;
 }
 
-.svg-btn-minus:active path,
-.svg-btn-plus:active path {
+.quantity-inner-btn-minus:active rect,
+.quantity-inner-btn-plus:active path {
   fill: var(--basic-light-blue);
 }
 
@@ -967,6 +978,16 @@ input[type="checkbox"]:disabled + label::after {
   padding: 6px 35px;
   margin-top: -2px;
   margin-left: -10px;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
 }
 
 /* Hotel sort */
@@ -1131,7 +1152,7 @@ input[type="checkbox"]:disabled + label::after {
   text-align: left;
 }
 
-.filter-price input:active, :hover, :focus {
+.filter-price input:active, :hover {
     outline: 0;
     outline-offset: 0;
 }
@@ -1144,14 +1165,6 @@ input[type="checkbox"]:disabled + label::after {
   background-color: var(--basic-white);
   top: 18px;
   left: 158px;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
 }
 
 input[name="cost-min"] {
