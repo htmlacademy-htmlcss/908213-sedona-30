@@ -460,6 +460,10 @@ div[class^="features-item-color"] {
 
 /* footer-contacts */
 
+.footer-contacts-link {
+  margin-bottom: 26px;
+}
+
 .footer-contacts-link,
 .footer-contacts-text,
 .footer-phone {
@@ -625,6 +629,7 @@ div[class^="features-item-color"] {
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
+
 .form-hotel-search {
   position: absolute;
   display: flex;
@@ -657,7 +662,7 @@ div[class^="features-item-color"] {
 
 .arrival-date-group {
   margin-top: -2px;
-  margin-bottom: 3px;
+  margin-bottom: 29px;
 }
 
 .form-hotel-search-date,
@@ -790,7 +795,7 @@ div[class^="features-item-color"] {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 36px;
+  width: 38px;
   height: 38px;
   cursor: pointer;
   background-color: transparent;
@@ -978,16 +983,6 @@ input[type="checkbox"]:disabled + label::after {
   padding: 6px 35px;
   margin-top: -2px;
   margin-left: -10px;
-}
-
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-input[type='number'] {
-    -moz-appearance: textfield;
 }
 
 /* Hotel sort */
@@ -1196,6 +1191,7 @@ input[name="cost-max"] {
 .range-controls .bar {
   height: 2px;
   background-color: var(--basic-white);
+  width: 80%;
 }
 
 .range-controls .toggle {
@@ -1211,9 +1207,11 @@ input[name="cost-max"] {
 
 .range-controls .toggle-min {
   margin-top: -10.5px;
+  margin-left: 0%;
 }
 .range-controls .toggle-max {
   margin-top: -19px;
+  margin-left: 80%;
 }
 
 .range-controls .toggle:hover {
