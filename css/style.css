@@ -78,6 +78,7 @@ img {
 }
 
 .container-wide {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
@@ -471,6 +472,7 @@ div[class^="features-item-color"] {
   font-weight: bold;
   line-height: 26px;
   color: #000000;
+  text-align: center;
 }
 
 .footer-contacts {
@@ -618,15 +620,25 @@ div[class^="features-item-color"] {
 /* Form hotel search */
 
 .block-form-hotel-search {
+  display: none;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 2169px;
   position: absolute;
   width: 567px;
   height: 395px;
   background-color: transparent;
-  top: 2169px;
-  left: 50%;
-  margin-left: -284px;
   overflow: hidden;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal-error {
+
 }
 
 
@@ -645,6 +657,7 @@ div[class^="features-item-color"] {
   color: var(--basic-black);
   text-align: left;
 }
+
 
 .form-hotel-search input {
   box-sizing: border-box;
@@ -701,6 +714,14 @@ div[class^="features-item-color"] {
   top: 7px;
   left: 428px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.form-hotel-search-calendar svg {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .form-hotel-search-calendar:hover path,
