@@ -17,7 +17,7 @@ try {
 hotelSearchBtn.addEventListener('click', function(evt) {
 	evt.preventDefault();
 	BlockFormHotelSearch.classList.toggle('modal-show');
-	FormArrivalDate.focus();
+	setTimeout(() => {FormArrivalDate.focus();
 
 	if (storage) {
   	FormArrivalDate.value = storage;
@@ -25,6 +25,7 @@ hotelSearchBtn.addEventListener('click', function(evt) {
 	} else {
   	 FormArrivalDate.focus();
 	}
+	}, 1500);
 });
 
 FormHotelSearch.addEventListener('submit', function(evt) {
