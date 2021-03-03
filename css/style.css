@@ -348,17 +348,18 @@ div[class^="features-item-color"] {
 
 .features-item:not(.features-item-cover-town, .features-item-cover-bridge) {
   width: 260px;
-  padding: 47px 70px 39px;
+  padding: 47px 70px 55px;
   background-color: var(--basic-grey);
 }
 
 .features-item-title {
-  margin: 0;
+  margin: 0 auto;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
   margin-bottom: 72px;
+  max-width: 160px;
 }
 
 .features-item-number {
@@ -371,10 +372,17 @@ div[class^="features-item-color"] {
 
 
 .features-item-text {
+  margin: 0 auto;
+  text-align: center;
   font-size: 14px;
   line-height: 21px;
   margin-left: 1px;
   margin-top: 22px;
+  max-width: 258px;
+}
+
+.text-wide {
+  max-width: 308px;
 }
 
 .features-sublist {
@@ -430,7 +438,7 @@ div[class^="features-item-color"] {
   line-height: 24px;
   max-width: 450px;
   margin: 0 auto;
-  margin-bottom: 44px;
+  margin-bottom: 42px;
 }
 
 .hotel-search-map img,
@@ -448,7 +456,7 @@ div[class^="features-item-color"] {
   display: grid;
   justify-content: center;
   margin-top: -128px;
-  padding-top: 23px;
+  padding-top: 21px;
   padding-bottom: 15px;
   grid-template-columns: 326px 400px 326px;
 }
@@ -628,9 +636,11 @@ div[class^="features-item-color"] {
   position: absolute;
   width: 567px;
   height: 395px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
   background-color: transparent;
   overflow: hidden;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .modal-show {
@@ -638,9 +648,9 @@ div[class^="features-item-color"] {
 }
 
 .modal-error {
-
+  animation-name: anim-error;
+  animation-duration: 1s;
 }
-
 
 .form-hotel-search {
   position: absolute;
@@ -650,12 +660,16 @@ div[class^="features-item-color"] {
   width: 458px;
   min-height: 281px;
   background-color: var(--basic-white);
+  margin: auto;
   top: 0;
   left: 0;
-
+  right: 0;
   font-weight: bold;
   color: var(--basic-black);
   text-align: left;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  animation-name: anim-slider;
+  animation-duration: 1.5s;
 }
 
 
@@ -1434,4 +1448,20 @@ input[name="cost-max"] {
 }
 .hotel-catalog-item-reservation:active span{
   opacity: 0.3;
+}
+
+
+/* Animation */
+
+@keyframes anim-slider {
+  from {transform: translateY(-300px); opacity: 0.8;}
+  to {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes anim-error {
+  form {transform: translateX(-30px);}
+  25% {transform: translateX(30px);}
+  50% {transform: translateX(-15px);}
+  75% {transform: translateX(15px);}
+  to {transform: translateX(0px);}
 }
