@@ -18,14 +18,16 @@ try {
 
 hotelSearchBtn.addEventListener('click', function(evt) {
 	evt.preventDefault();
+  BlockFormHotelSearch.classList.remove('modal-error');
 	BlockFormHotelSearch.classList.toggle('modal-show');
 	setTimeout(() => {FormArrivalDate.focus();}, 1500);
 });
 
 FormHotelSearch.addEventListener('submit', function(evt) {
-  if (!FormArrivalDate || !FormDepartureDate || FormArrivalDateGrownup === 0) {
-      evt.preventDefaut();
-      FormHotelSearch.classList.add('modal-error');
+  BlockFormHotelSearch.classList.remove('modal-error');
+  if (!FormArrivalDate.value || !FormDepartureDate.value || FormArrivalDateGrownup.value < 1) {
+      evt.preventDefault();
+      BlockFormHotelSearch.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
       localStorage.setItem('quantity_grownup', FormArrivalDateGrownup.value);
@@ -34,9 +36,11 @@ FormHotelSearch.addEventListener('submit', function(evt) {
   }
 });
 
-if (!BlockFormHotelSearch.classList.contains('modal-show')) {
-      FormHotelSearch.classList.remove('modal-error');
-    }
+hotelSearchBtn.addEventListener('click', function(evt) {
+  if (!BlockFormHotelSearch.classList.contains('modal-show')) {
+    FormHotelSearch.classList.remove('modal-error');
+  }
+});
 
 window.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27) {
