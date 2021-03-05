@@ -7,11 +7,16 @@ let FormArrivalDateGrownup = FormHotelSearch.querySelector('[name=arrival-date-g
 let FormArrivalDateChildren = FormHotelSearch.querySelector('[name=arrival-date-children]');
 
 let isStorageSupport = true;
-let storage = '';
+let storageQuantityGrownup = '';
+let storageQuantityChildren = '';
+
+BlockFormHotelSearch.classList.remove('modal-show');
+FormArrivalDate.removeAttribute('required');
+FormDepartureDate.removeAttribute('required');
 
 try {
-  storage = localStorage.getItem('quantity_grownup');
-  storage = localStorage.getItem('quantity_children');
+  storageQuantityGrownup = localStorage.getItem('quantity_grownup');
+  storageQuantityChildren = localStorage.getItem('quantity_children');
 } catch(err) {
   isStorageSupport = false;
 }
@@ -21,12 +26,18 @@ hotelSearchBtn.addEventListener('click', function(evt) {
   BlockFormHotelSearch.classList.remove('modal-error');
 	BlockFormHotelSearch.classList.toggle('modal-show');
 	setTimeout(() => {FormArrivalDate.focus();}, 1500);
+
+	if (FormArrivalDateGrownup && FormArrivalDateChildren) {
+  	FormArrivalDateGrownup.value = storageQuantityGrownup;
+    FormArrivalDateChildren.value = storageQuantityChildren;
+	}
 });
 
 FormHotelSearch.addEventListener('submit', function(evt) {
-  BlockFormHotelSearch.classList.remove('modal-error');
   if (!FormArrivalDate.value || !FormDepartureDate.value || FormArrivalDateGrownup.value < 1) {
       evt.preventDefault();
+      BlockFormHotelSearch.classList.remove('modal-error');
+      BlockFormHotelSearch.offsetWidth = BlockFormHotelSearch.offsetWidth;
       BlockFormHotelSearch.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
