@@ -336,16 +336,6 @@ div[class^="features-item-color"] {
   flex-wrap: wrap;
 }
 
-/*.features-square-item {
-  grid-area: other;
-}
-.features-road-item {
-  grid-area: other;
-}
-.features-tourists-item {
-  grid-area: other;
-}*/
-
 .features-item:not(.features-item-cover-town, .features-item-cover-bridge) {
   width: 260px;
   padding: 47px 70px 55px;
@@ -369,7 +359,6 @@ div[class^="features-item-color"] {
 .features-item:not(.features-item-cover-town, .features-item-cover-bridge) .features-item-number {
   margin-top: -49px;
 }
-
 
 .features-item-text {
   margin: 0 auto;
@@ -649,7 +638,7 @@ div[class^="features-item-color"] {
 
 .modal-error {
   animation-name: anim-error;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 .form-hotel-search {
@@ -671,7 +660,6 @@ div[class^="features-item-color"] {
   animation-name: anim-slider;
   animation-duration: 1.5s;
 }
-
 
 .form-hotel-search input {
   box-sizing: border-box;
@@ -868,6 +856,7 @@ div[class^="features-item-color"] {
 
 /*-------------------catalog----------------------*/
 
+
 /* Hotel filters */
 
 .hotel-filters {
@@ -900,7 +889,6 @@ div[class^="features-item-color"] {
   list-style: none;
   padding-left: 40px;
   width: 130px;
-
 }
 
 .filter-infrastructure-item {
@@ -1174,7 +1162,6 @@ input[type="checkbox"]:disabled + label::after {
   box-sizing: border-box;
   position: relative;
   appearance: none;
-
   width: 158px;
   height: 36px;
   border: 2px solid var(--basic-white);
@@ -1352,7 +1339,6 @@ input[name="cost-max"] {
   padding: 0;
   margin: 0;
   list-style: none;
-
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -1453,15 +1439,16 @@ input[name="cost-max"] {
 
 /* Animation */
 
+
 @keyframes anim-slider {
   from {transform: translateY(-300px); opacity: 0.8;}
   to {transform: translateY(0px); opacity: 1;}
 }
 
 @keyframes anim-error {
-  form {transform: translateX(-30px);}
-  25% {transform: translateX(30px);}
-  50% {transform: translateX(-15px);}
-  75% {transform: translateX(15px);}
+  form {transform: translateX(-20px);}
+  25% {transform: translateX(20px);}
+  50% {transform: translateX(-10px);}
+  75% {transform: translateX(10px);}
   to {transform: translateX(0px);}
 }
